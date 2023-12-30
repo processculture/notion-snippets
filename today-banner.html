@@ -2,22 +2,6 @@
 <head>
     <title>Date Banner Widget for Notion</title> 
     <style>
-
-      #container {
-        display: flex;
-        align-items: flex-start;
-      }
-
-      #date{
-          font-size:12pt;
-          font-weight: bold;
-      }
-
-      body{
-          background-color: #ffffff;
-          height: 50px;
-          max-height: 50px;
-      }
       
       #today-banner-widget {
         display: flex;
@@ -32,26 +16,42 @@
         font-weight: bold;
         flex-direction: row;
       }
+
+      #container {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #date{
+          font-size:12pt;
+          font-weight: bold;
+      }
+
+      body{
+          background-color: #ffffff;
+      }
+
     </style>
 </head>
+    
 <body>
     <div id="today-banner-widget"></div>
 </body>
 
 <script>
-    const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const months = ["January", "February", "March", "April", "May", "June",
+    const w = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const m = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
 
     
     var today = new Date();
-    var day = weekdays[today.getDay()];
-    var date = `${day}, ${months[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+    var day = w[today.getDay()];
+    var date = `${day}, ${m[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
 
     var bannerMessage;
-    var hours = today.getHours();
-    var bannerMessage = (hours < 12) ? 'Good morning  ' : ((hours >= 12 && hours <= 17) ? 'Good afternoon ' : 'Good evening ');
+    var h = today.getHours();
+    var bannerMessage = (h < 12) ? 'Good morning  ' : ((h >= 12 && hours <= 17) ? 'Good afternoon ' : 'Good evening ');
     
     document.getElementById('today-banner-widget').innerHTML = `
         <div class="container">
