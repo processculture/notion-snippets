@@ -59,9 +59,9 @@
     var h = today.getHours();
     var bannerMessage = (h < 12) ? 'Good Morning!  ' : ((h >= 12 && h <= 17) ? 'Good Afternoon! ' : 'Good Evening! ');
 
-    var imageUrl = "https://source.unsplash.com/random/900x700/?sunrise";;
+    var imageUrl = "https://source.unsplash.com/random/450x350/?sunrise";;
     if(h > 17){
-     imageUrl = "https://source.unsplash.com/random/900x700/?sunset";
+     imageUrl = "https://source.unsplash.com/random/450x350/?sunset";
     }
     
     document.getElementById('tb-widget').innerHTML = `
