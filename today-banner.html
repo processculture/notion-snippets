@@ -29,13 +29,14 @@
 
       body{
           background-color: #ffffff;
+          overflow: hidden; 
       }
 
     </style>
 </head>
     
 <body>
-    <div id="today-banner-widget"></div>
+    <div id="tb-widget"></div>
 </body>
 
 <script>
@@ -53,7 +54,7 @@
     var h = today.getHours();
     var bannerMessage = (h < 12) ? 'Good Morning!  ' : ((h >= 12 && h <= 17) ? 'Good Afternoon! ' : 'Good Evening! ');
     
-    document.getElementById('today-banner-widget').innerHTML = `
+    document.getElementById('tb-widget').innerHTML = `
         <div class="container">
           <div id="date"> ${date}</div>
           <div class="greeting">${bannerMessage}</div>
