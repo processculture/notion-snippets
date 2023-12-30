@@ -49,7 +49,7 @@
 
     var bannerMessage;
     var hours = today.getHours();
-    var bannerMessage = (hours < 12) ? 'Good morning  ' : ((hours >= 12 && hours <= 17) ? 'Good afternoon ' : 'Good evening ';
+    var bannerMessage = (hours < 12) ? 'Good morning  ' : ((hours >= 12 && hours <= 17) ? 'Good afternoon ' : 'Good evening ');
     
     document.getElementById('today-banner-widget').innerHTML = `
         <div class="container">
