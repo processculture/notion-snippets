@@ -69,17 +69,18 @@
     var bannerMessage;
     var h = today.getHours();
     var bannerMessage = (h < 12) ? 'Good Morning!  ' : ((h >= 12 && h <= 17) ? 'Good Afternoon! ' : 'Good Evening! ');
+    bannerMessage += '<br/>';
 
-    var imageUrl = "https://source.unsplash.com/random/900x700/?sunrise";
+    var imageUrl = "https://source.unsplash.com/random/1200x900/?sunrise";
 
     if(h >= 9 && h <= 17){
-        imageUrl = "https://source.unsplash.com/random/900x700/?beach-house";
+        imageUrl = "https://source.unsplash.com/random/1200x900/?beach-house";
     }
     else if(h > 17 && h < 21){
-     imageUrl = "https://source.unsplash.com/random/900x700/?sunset";
+     imageUrl = "https://source.unsplash.com/random/1200x900/?sunset";
     } 
     else if(h >= 21 || h < 5){
-        imageUrl = "https://source.unsplash.com/random/900x700/?night-sky";
+        imageUrl = "https://source.unsplash.com/random/1200x900/?night-sky";
     }
     
     document.getElementById('tb-widget').innerHTML = `
