@@ -9,7 +9,7 @@
         border: 1px solid #ffffff;
         font-family: Arial;
         font-size: 16pt;
-        color: #228B22;
+        color: #3b3c36;
         justify-content: left;
         line-height: 1.5;
         height:100%;
@@ -25,6 +25,15 @@
       #date{
           font-size:12pt;
           font-weight: bold;
+      }
+
+      #banner-message {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+      }
+
+      #banner-image {
+          height: 100%;
       }
 
       body{
@@ -74,7 +83,7 @@
     document.getElementById('tb-widget').innerHTML = `
         <div class="container">
           <div id="date"> ${date}</div>
-          <div class="greeting">${bannerMessage}</div>
+          <div class="banner-message">${bannerMessage}</div>
           <div class="banner-image">
                   <img src="${imageUrl}"/>
           </div>        
