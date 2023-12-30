@@ -6,9 +6,10 @@
       #tb-widget {
         display: flex;
         padding: 0px;
+        padding-bottom: 10px;
         border: 1px solid #ffffff;
         font-family: Arial;
-        font-size: 16pt;
+        font-size: 18pt;
         color: #3b3c36;
         justify-content: left;
         line-height: 1.5;
@@ -23,7 +24,7 @@
       }
 
       #date{
-          font-size:12pt;
+          font-size:18pt;
           font-weight: bold;
       }
 
@@ -83,7 +84,7 @@
     document.getElementById('tb-widget').innerHTML = `
         <div class="container">
           <div id="date"> ${date}</div>
-          <div class="banner-message">${bannerMessage}</div>
+          <div class="banner-message">${bannerMessage}<br/><br/></div>
           <div class="banner-image">
                   <img src="${imageUrl}"/>
           </div>        
