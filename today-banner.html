@@ -75,7 +75,6 @@
     var bannerMessage;
     var h = today.getHours();
     var bannerMessage = (h < 12) ? 'Good Morning!  ' : ((h >= 12 && h <= 17) ? 'Good Afternoon! ' : 'Good Evening! ');
-    bannerMessage += '<br/>';
 
     var imageUrl = "https://source.unsplash.com/random/1200x900/?sunrise";
 
@@ -92,7 +91,7 @@
     document.getElementById('tb-widget').innerHTML = `
         <div id="container">
           <div id="date"> ${date}</div>
-          <div id="banner-message">${bannerMessage}<br/></div>
+          <div id="banner-message">${bannerMessage}</div>
           <div id="banner-image">
                   <img src="${imageUrl}" style="max-width: 100%; width: 100%"/>
           </div>        
