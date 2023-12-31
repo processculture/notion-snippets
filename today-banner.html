@@ -35,7 +35,9 @@
       }
 
       #banner-image {
-          height: 100%;
+          height: auto;
+          width: 100%;
+          main-width: 100%;
       }
 
       body{
@@ -88,7 +90,7 @@
           <div id="date"> ${date}</div>
           <div class="banner-message">${bannerMessage}<br/></div>
           <div class="banner-image">
-                  <img src="${imageUrl}"/>
+                  <img src="${imageUrl}" style="max-width: 100%; width: 100%"/>
           </div>        
         <div/>
     `;
