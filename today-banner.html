@@ -69,7 +69,9 @@
     
     var today = new Date();
     var day = w[today.getDay()];
-    var date = `${day}, ${m[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+    var todayDayNum = today.getDate();
+    var ordinalDate = todayDayNum + (todayDayNum > 0 ? ['th', 'st', 'nd', 'rd'][(todayDayNum > 3 && todayDayNum < 21) || todayDayNum % 10 > 3 ? 0 : todayDayNum % 10] : '');
+    var date = `${day}, ${m[today.getMonth()]} ${ordinalDate} ${today.getFullYear()}`;
 
     var bannerMessage;
     var h = today.getHours();
@@ -90,7 +92,7 @@
         imageUrl = "https://source.unsplash.com/random/1200x900/?night-sky";
         iconUrl = "https://img.icons8.com/ios/250/000000/lullaby.png";
     }
-    
+   
     document.getElementById('tb-widget').innerHTML = `
         <div id="container">
           <div id="date"><img src="${iconUrl}" style="width:24px;height:auto;vertical-align:bottom;"/>${bannerMessage} Today is <b>${date}</b> </div>
